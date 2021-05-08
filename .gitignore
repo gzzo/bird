@@ -1,4 +1,6 @@
 .idea/
+.DS_Store
+
 
 # --- From phx.new ---
 # The directory Mix will write compiled artifacts to.

@@ -7,6 +7,8 @@ defmodule BirdWeb.Router do
 
   scope "/api", BirdWeb do
     pipe_through :api
+
+    get "/", ApiController, :index
   end
 
   # Enables LiveDashboard only for development
