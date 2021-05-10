@@ -1,3 +1,4 @@
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import webpack from 'webpack'
 import merge from 'webpack-merge'
 
@@ -11,6 +12,8 @@ export default merge(common, {
     filename: '[name].[fullhash].js',
   },
 
+  target: 'web',
+
   devtool: 'cheap-module-source-map',
 
   module: {
@@ -21,15 +24,18 @@ export default merge(common, {
     contentBase: './dist',
     hot: true,
     historyApiFallback: true,
-    proxy: {
-      '/api': {
+    proxy: [
+      {
+        context: ['/api', '/socket'],
         target: 'http://localhost:4000',
+        ws: true,
       },
-    },
+    ],
   },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin(),
     new webpack.DefinePlugin({
       DEBUG: JSON.stringify(true),
     }),

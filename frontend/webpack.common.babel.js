@@ -2,7 +2,6 @@ import path from 'path'
 
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 export default {
   context: path.resolve(__dirname, 'src'),
@@ -20,7 +19,6 @@ export default {
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
-    new ReactRefreshPlugin(),
   ],
 
   resolve: {

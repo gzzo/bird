@@ -53,6 +53,10 @@ module.exports = {
       },
     ],
     'import/no-extraneous-dependencies': 'off',
+
+    'react/no-array-index-key': 'off',
+
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 
   overrides: [

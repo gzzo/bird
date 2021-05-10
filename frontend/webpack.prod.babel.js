@@ -9,6 +9,8 @@ export default merge(common, {
 
   devtool: 'source-map',
 
+  target: 'browserslist',
+
   module: {
     rules: getRules(),
   },
