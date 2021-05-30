@@ -1,1 +1,1 @@
-# Bird.Umbrella
+Playing around with Elixir, Phoenix, and React
